@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+.footer-wrapper{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    padding: 5%;
+    .title-name{
+        font-size: 2rem;
+        font-family: 'Quicksand', sans-serif;
+        margin: 5%;
+        font-weight: bold;
+        @media (max-width :1020px) {
+            font-size: 1rem;
+        }
+        @media (max-width :520px) {
+            font-size: 1rem;
+        }
+    }
+    .profile-image{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../assets/profile.png');
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        @media (max-width :1020px) {
+            height: 150px;
+            width: 150px;
+        }
+        @media (max-width :520px) {
+            height: 100px;
+            width: 100px;
+        }
+    }
+    .icons-wrapper{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        img{
+            height: 100%;
+            width: 70px;
+            margin: 1%;
+            @media (max-width :1020px) {
+                height: 40px;
+                width: 40px;
+            }
+            @media (max-width :520px) {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}
