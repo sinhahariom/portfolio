@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="icons-wrapper">
                 {
                     icons.map(icon =>(
-                        <img src={icon}></img>
+                        <img src={icon} alt="NA"></img>
                     ))
                 }
             </div>

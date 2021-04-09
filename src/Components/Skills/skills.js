@@ -22,7 +22,7 @@ const Skills = () => {
         <div className="skills-wrapper">
             <div className="skills-icons-wrapper">
                 {skillList.map(link => (
-                    <img class="skill-icon" src= {link}></img>
+                    <img class="skill-icon" src= {link} alt="NA"></img>
                 ))}
             </div>
         </div>
