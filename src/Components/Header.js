@@ -3,9 +3,9 @@ import './Header.scss';
 const Header = () => {
     return ( 
         <div className="header-wrapper">
-            <span class="profile-title-wrapper">FrontEnd Developer | UI/UX Designer | Content Writer</span>
-            <span class="profile-sub-title-wrapper">Hariom Sinha</span>
-            <div class="svg-wrapper"></div>
+            <span className="profile-title-wrapper">FrontEnd Developer | UI/UX Designer | Content Writer</span>
+            <span className="profile-sub-title-wrapper">Hariom Sinha</span>
+            <div className="svg-wrapper"></div>
         </div>
      );
 }

@@ -11,12 +11,12 @@ const Footer = () => {
 
     return ( 
         <div className="footer-wrapper">
-            <span class="profile-image"></span>
-            <span class="title-name">Hariom Sinha</span>
+            <span className="profile-image"></span>
+            <span className="title-name">Hariom Sinha</span>
             <div className="icons-wrapper">
                 {
                     icons.map(icon =>(
-                        <img src={icon} alt="NA"></img>
+                        <img src={icon} key={icon} alt="NA"></img>
                     ))
                 }
             </div>

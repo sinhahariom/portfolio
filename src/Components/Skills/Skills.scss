@@ -42,10 +42,12 @@
             @media (max-width :1020px) {
                 height: 80px;
                 width: 80px;
+                padding: 4%;
             }
             @media (max-width :520px) {
                 height: 60px;
                 width: 60px;
+                padding: 5%;
             }
         }
     }
