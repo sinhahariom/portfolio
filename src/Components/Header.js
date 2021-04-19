@@ -1,4 +1,5 @@
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -53,14 +54,29 @@ const Header = () => {
         }
     ]
 
+    const clickOpenMobileNav = ()=>{
+        document.getElementById('navbar-id').classList.add('mobile-nav');
+        document.getElementById('nav-text-blog').style.display = "block";
+        document.getElementById('nav-text-resume').style.display = "block";
+        document.getElementById('mobile-nav-open-id').classList.add('hide');
+        document.getElementById('mobile-nav-close-id').classList.add('show');
+    }
+    const clickCloseMobileNav = ()=>{
+        document.getElementById('navbar-id').classList.remove('mobile-nav');
+        document.getElementById('nav-text-blog').style.display = "none";
+        document.getElementById('nav-text-resume').style.display = "none";
+        document.getElementById('mobile-nav-open-id').classList.remove('hide');
+        document.getElementById('mobile-nav-close-id').classList.remove('show');
+    }
+
     return ( 
         <div className="header-wrapper">
-            <div className="navbar-wrapper">
-                <img className="open" src="data:image/svg+xml,%3Csvg id='Layer_1' enable-background='new 0 0 512 512' height='512' viewBox='0 0 512 512' width='512' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='m174 240h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z'/%3E%3Cpath d='m446 240h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z'/%3E%3Cpath d='m392 512c-66.168 0-120-53.832-120-120s53.832-120 120-120 120 53.832 120 120-53.832 120-120 120zm0-208c-48.523 0-88 39.477-88 88s39.477 88 88 88 88-39.477 88-88-39.477-88-88-88z'/%3E%3Cpath d='m174 512h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z'/%3E%3C/g%3E%3C/svg%3E"></img>
-                <img className="close" src="data:image/svg+xml,%3Csvg height='311pt' viewBox='0 0 311 311.07733' width='311pt' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m16.035156 311.078125c-4.097656 0-8.195312-1.558594-11.308594-4.695313-6.25-6.25-6.25-16.382812 0-22.632812l279.0625-279.0625c6.25-6.25 16.382813-6.25 22.632813 0s6.25 16.382812 0 22.636719l-279.058594 279.058593c-3.136719 3.117188-7.234375 4.695313-11.328125 4.695313zm0 0'/%3E%3Cpath d='m295.117188 311.078125c-4.097657 0-8.191407-1.558594-11.308594-4.695313l-279.082032-279.058593c-6.25-6.253907-6.25-16.386719 0-22.636719s16.382813-6.25 22.636719 0l279.058594 279.0625c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.230469 4.695313-11.304687 4.695313zm0 0'/%3E%3C/svg%3E"></img>
-                <span>Home</span>
-                <span>My Blogs</span>
-                <span>Download My Resume</span>
+            <div className="navbar-wrapper" id="navbar-id">
+                <button onClick={clickOpenMobileNav} className="mobile-nav-open" id="mobile-nav-open-id"><img alt="NA" src="data:image/svg+xml,%3Csvg id='Layer_1' enable-background='new 0 0 512 512' height='512' viewBox='0 0 512 512' width='512' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='m174 240h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z'/%3E%3Cpath d='m446 240h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z'/%3E%3Cpath d='m392 512c-66.168 0-120-53.832-120-120s53.832-120 120-120 120 53.832 120 120-53.832 120-120 120zm0-208c-48.523 0-88 39.477-88 88s39.477 88 88 88 88-39.477 88-88-39.477-88-88-88z'/%3E%3Cpath d='m174 512h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z'/%3E%3C/g%3E%3C/svg%3E"></img></button>
+                <button onClick={clickCloseMobileNav} className="mobile-nav-close" id="mobile-nav-close-id"><img alt="NA" src="data:image/svg+xml,%3Csvg height='311pt' viewBox='0 0 311 311.07733' width='311pt' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m16.035156 311.078125c-4.097656 0-8.195312-1.558594-11.308594-4.695313-6.25-6.25-6.25-16.382812 0-22.632812l279.0625-279.0625c6.25-6.25 16.382813-6.25 22.632813 0s6.25 16.382812 0 22.636719l-279.058594 279.058593c-3.136719 3.117188-7.234375 4.695313-11.328125 4.695313zm0 0'/%3E%3Cpath d='m295.117188 311.078125c-4.097657 0-8.191407-1.558594-11.308594-4.695313l-279.082032-279.058593c-6.25-6.253907-6.25-16.386719 0-22.636719s16.382813-6.25 22.636719 0l279.058594 279.0625c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.230469 4.695313-11.304687 4.695313zm0 0'/%3E%3C/svg%3E"></img></button>
+                {/* <span id="nav-text-home"><Link to="/">Home</Link></span> */}
+                <span id="nav-text-blog"><Link to="/blogHome">My Blogs</Link></span>
+                <span id="nav-text-resume">Download My Resume</span>
             </div>
             <span className="profile-title-wrapper">FrontEnd Developer</span>
             <span className="profile-sub-title-wrapper">Hariom Sinha</span>
