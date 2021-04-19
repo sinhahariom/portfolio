@@ -29,7 +29,7 @@ const Footer = () => {
                     ))
                 }
             </div>
-            <span className="footer-hire-me">Hire Me Or Lets Have a Chat !</span>
+            {/* <span className="footer-hire-me">Hire Me Or Lets Have a Chat !</span> */}
             <span className="footer-epilogue">sinhahariom1@gmail.com</span>
             <span className="footer-epilogue">(+91) 8337944479</span>
             <span className="footer-copyright"> &copy; sinhahariom.netlify.app</span>
