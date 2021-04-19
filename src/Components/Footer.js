@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="icons-wrapper">
                 {
                     icons.map(icon =>(
-                        <a target="_blank" rel="noreferrer" href={icon.link} ><img src={icon.imgsrc} key={icon.imgsrc} alt="NA"></img></a>
+                        <a target="_blank" rel="noreferrer" href={icon.link} key={icon.imgsrc}><img src={icon.imgsrc} key={icon.imgsrc} alt="NA"></img></a>
                     ))
                 }
             </div>
