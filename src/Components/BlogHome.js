@@ -19,6 +19,17 @@ const BlogHome = () => {
         {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:10},
         {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:11}
     ]);
+    const [blogState] = useState(false);
+
+    const readBlog = (id)=>{
+        for(let i =0; i<blogData.length; i++){
+            if(document.getElementById(blogData[i].id).style.display==="block")
+               { document.getElementById(blogData[i].id).style.display = "none";
+                }
+        }
+        document.getElementById(id).style.display = "block";
+    }
+
 
     return ( 
         <div className="blog-parent-wrapper">
@@ -26,7 +37,7 @@ const BlogHome = () => {
                 <Link to="/">Home</Link>
             </div>  
             {blogData.map((data) => (
-                <BlogHomeCommon blogTitle={data.title} subTitle = {data.subTitle} key={data.id}></BlogHomeCommon>
+                <BlogHomeCommon blogTitle={data.title} subTitle = {data.subTitle} key={data.id} btnId={data.id} readBlog = {()=> readBlog(data.id)} blogState = {blogState}></BlogHomeCommon>
             ))}
         </div>
     );
