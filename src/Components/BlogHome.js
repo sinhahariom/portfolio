@@ -6,7 +6,7 @@ import './BlogHome.scss';
 
 const BlogHome = () => {
 
-    const [blogData,setblogdata] = useState([
+    const [blogData] = useState([
         {"title":"React Fundamentals","subTitle":"A Blog Covering basics of REACT.", id:1},
         {"title":"Angular Fundamentals","subTitle":"A Blog Covering basics of Angular and its usage.", id:2},
         {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:3},
