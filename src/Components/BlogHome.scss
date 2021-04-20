@@ -1,7 +1,15 @@
 .blog-parent-wrapper{
     width: 100vw;
-    height: 100vw;
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    .blog-header-wrapper{
+        height: 100px;
+        background-color: black ;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+    }
 }
