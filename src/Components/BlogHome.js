@@ -20,14 +20,16 @@ const BlogHome = () => {
         {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:11}
     ]);
     const [blogState] = useState(false);
-
+    const [prevBlog, setPrevBlog] = useState(1);
     const readBlog = (id)=>{
-        for(let i =0; i<blogData.length; i++){
-            if(document.getElementById(blogData[i].id).style.display==="block")
-               { document.getElementById(blogData[i].id).style.display = "none";
-                }
+
+        if(id === prevBlog && document.getElementById(id).style.display==="block"){
+            document.getElementById(id).style.display = "none";
+        }else{
+            document.getElementById(prevBlog).style.display = "none";
+            document.getElementById(id).style.display = "block";
         }
-        document.getElementById(id).style.display = "block";
+        setPrevBlog(id);
     }
 
 
