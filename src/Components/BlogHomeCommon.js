@@ -5,9 +5,12 @@ const BlogHomeCommon = (props) => {
     return ( 
 
         <div className="box-wrapper">
-            <div className="title-wrapper">
-                <span className="title">{props.blogTitle}</span>
-                <span className="sub-title">{props.subTitle}</span>
+            <button className="btn-wrapper">
+                    <span className="title">{props.blogTitle}</span>
+                    <span className="sub-title">{props.subTitle}</span>
+            </button>
+            <div className="content-wrapper">
+
             </div>
         </div>
 
