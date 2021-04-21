@@ -1,35 +1,34 @@
 import { useState } from "react";
 import BlogHomeCommon from "./BlogHomeCommon";
 import { Link } from 'react-router-dom';
-
+import {BlogData} from '../assets/BlogData';
 import './BlogHome.scss';
 
 const BlogHome = () => {
 
-    const [blogData] = useState([
-        {"title":"React Fundamentals","subTitle":"A Blog Covering basics of REACT.", id:1},
-        {"title":"Angular Fundamentals","subTitle":"A Blog Covering basics of Angular and its usage.", id:2},
-        {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:3},
-        {"title":"UI-UX","subTitle":"Intro To UI-UX", id:4},
-        {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:5},
-        {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:6},
-        {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:7},
-        {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:8},
-        {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:9},
-        {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:10},
-        {"title":"Spring Boot Fundamentals","subTitle":"A Blog Covering basics of Spring Boot.", id:11}
-    ]);
+    const [blogData] = useState(BlogData);
     const [blogState] = useState(false);
-    const [prevBlog, setPrevBlog] = useState(1);
+    const [prevBlog, setPrevBlog] = useState('1_btn');
+    const [prevBtn, setPrevBtn] = useState('1');
     const readBlog = (id)=>{
-
+        
+        let temp = id;
+        id = id+'_btn';
+        
         if(id === prevBlog && document.getElementById(id).style.display==="block"){
             document.getElementById(id).style.display = "none";
+            document.getElementById(temp).style.backgroundColor = "white";
+            document.getElementById(temp).style.color = "#15501a";
         }else{
             document.getElementById(prevBlog).style.display = "none";
+            document.getElementById(prevBtn).style.color = "#15501a";
+            document.getElementById(prevBtn).style.backgroundColor = "white";
             document.getElementById(id).style.display = "block";
+            document.getElementById(temp).style.backgroundColor = "rebeccapurple";
+            document.getElementById(temp).style.color = "white";
         }
         setPrevBlog(id);
+        setPrevBtn(temp);
     }
 
 
@@ -37,9 +36,12 @@ const BlogHome = () => {
         <div className="blog-parent-wrapper">
             <div className="blog-header-wrapper">
                 <Link to="/">Home</Link>
+            </div>
+            <div className="blog-page-title">
+                <span>My Stories</span>    
             </div>  
             {blogData.map((data) => (
-                <BlogHomeCommon blogTitle={data.title} subTitle = {data.subTitle} key={data.id} btnId={data.id} readBlog = {()=> readBlog(data.id)} blogState = {blogState}></BlogHomeCommon>
+                <BlogHomeCommon blogTitle={data.title} subTitle = {data.subTitle} blogContent = {data.blogContent} key={data.id} btnId={data.id} readBlog = {readBlog} blogState = {blogState}></BlogHomeCommon>
             ))}
         </div>
     );
