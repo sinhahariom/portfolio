@@ -16,6 +16,7 @@
         border-radius: 10px;
         margin-bottom: 1%;
         margin-top: 3%;
+        transition: all 0.5s;
             .title{
                 display: flex;
                 font-size: 1.5rem;
@@ -45,7 +46,6 @@
                 color: rgb(255, 255, 255);
                 font-weight: bold;
                 background-color:rebeccapurple ;
-
             }
     }
     .content-wrapper{
@@ -58,10 +58,22 @@
         margin-top: 0%;
         font-weight: bold;
         font-family: 'Source Sans Pro', sans-serif;
+        animation: displayAnimation 2s;
         .content{
             display: flex;
             align-items: center;
             justify-content: left;    
+        }
+        @keyframes displayAnimation {
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
         }
     }
 }
