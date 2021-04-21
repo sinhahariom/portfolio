@@ -23,8 +23,10 @@
         color: white;
         font-weight: bold;
         @media (max-width : 575px) {
-            width: fit-content;
-            left: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             top: 80%;
         }
         &.mobile-nav{
@@ -36,7 +38,7 @@
             background-color: #000000ed;
             top: 0;
             left: 0;
-            padding: 20% 10% 10% 10%;
+            padding: 0% 10% 10% 10%;
             z-index: 9999;
             overflow: hidden;
         }
@@ -86,7 +88,8 @@
             &.show{
                 display: block;
                 position: absolute;
-                right: 5%;
+                right: 10%;
+                top: 4rem;
             }
         }
     }
