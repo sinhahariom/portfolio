@@ -6,8 +6,8 @@
     flex-wrap: wrap;
     .blog-header-wrapper{
         height: 100px;
-        background-color: black ;
-        color: white;
+        background-color: #ffeaea;
+        color: rgb(133, 48, 48);
         display: flex;
         align-items: center;
         padding-left: 5rem;
@@ -15,6 +15,10 @@
         @media (max-width : 575px) {
             font-size: 1rem;        
             padding-left: 2rem;
+        }
+        a{
+            height: 30px;
+            width: 30px;
         }
     }
     .blog-page-title{
