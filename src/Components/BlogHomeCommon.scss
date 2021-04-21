@@ -59,10 +59,12 @@
         font-weight: bold;
         font-family: 'Source Sans Pro', sans-serif;
         animation: displayAnimation 2s;
+        border-top: 5px solid #15501a;
         .content{
             display: flex;
             align-items: center;
-            justify-content: left;    
+            justify-content: left;  
+            text-align: justify;  
         }
         @keyframes displayAnimation {
             0%{

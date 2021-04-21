@@ -1,8 +1,8 @@
 export var BlogData = [
     {"title":"'A Zero in SetTimeOut', said JavaScript","subTitle":"Hariom Sinha. March 7/2021", "id":1,"blogContent":"Out of the zillion things we do while writing a JavaScript Code, all of us comes to a point where we need to render stuffs based on some time intervals. And well, all thanks to JavaScript, it has given us “setTimeout”."},
-    {"title":"Scalability, An Apple Seller Story.","subTitle":"Hariom Sinha. March 25/2021", "id":2},
-    {"title":"Elastic Search Using Spring Boot","subTitle":"Hariom Sinha. Jan 1/2021", "id":3},
-    {"title":"Job DSL in Integration with Docker","subTitle":"Hariom Sinha. Sep 6/2020", "id":4},
-    {"title":"API Interceptors | Spring Boot 2.0","subTitle":"Hariom Sinha. Jul 30/2020", "id":5},
-    {"title":"A Precis to JSON Web Tokens","subTitle":"Hariom Sinha. Apr 18/2020", "id":6},
+    {"title":"Scalability, An Apple Seller Story.","subTitle":"Hariom Sinha. March 25/2021", "id":2,"blogContent":"Imagine a Apple Fruit seller selling his bucket of apples every day and night. He is just a small business man who dreams of selling as much of his buckets as he can. He is a goal seeker and he believes in underlying process and small realistic goals. Though, at the start of this new business, he has a bunch of Customers buying from him every then and now. Whenever a new Customer comes, he actively guides him to buy the best fruit he has.Imagine a time, when his business is at peak. The Customers are growing day and night because of the quality he sells. But with the surge in numbers, he is not able to manage all of them and many a times the Customers are getting annoyed of not getting a chance to buy the best Apples as they were before."},
+    {"title":"Elastic Search Using Spring Boot","subTitle":"Hariom Sinha. Jan 1/2021", "id":3,"blogContent":"On Your Way"},
+    {"title":"Job DSL in Integration with Docker","subTitle":"Hariom Sinha. Sep 6/2020", "id":4,"blogContent":"On Your Way"},
+    {"title":"API Interceptors | Spring Boot 2.0","subTitle":"Hariom Sinha. Jul 30/2020", "id":5,"blogContent":"On Your Way"},
+    {"title":"A Precis to JSON Web Tokens","subTitle":"Hariom Sinha. Apr 18/2020", "id":6,"blogContent":"On Your Way"},
 ]
