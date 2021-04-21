@@ -1,6 +1,6 @@
 .header-wrapper{
     width: 100%;
-    min-height: 500px;
+    min-height: 650px;
     font-family: 'Titillium Web', sans-serif;
     display: flex;
     align-items: center;
@@ -24,6 +24,8 @@
         font-weight: bold;
         @media (max-width : 575px) {
             width: fit-content;
+            left: 8rem;
+            top: 80%;
         }
         &.mobile-nav{
             top: 10%;
@@ -33,10 +35,10 @@
             width: 100vw;
             background-color: #000000ed;
             top: 0;
+            left: 0;
             padding: 20% 10% 10% 10%;
             z-index: 9999;
             overflow: hidden;
-
         }
         span{
             width: 100%;
@@ -78,8 +80,8 @@
             cursor: pointer;
             display: none;
             img{
-                height: 2rem;
-                width: 2rem;
+                height: 1rem;
+                width: 1rem;
             }
             &.show{
                 display: block;
@@ -94,11 +96,9 @@
         text-align: center;
         transform: skewY(10deg);
         margin-top: 5%;
-        @media (max-width : 992px) {
-            // margin-top: 5%;
-        }
         @media (max-width : 575px) {
             font-size: 2rem;
+            margin-top: -20%;
         }
 
     }
@@ -107,8 +107,29 @@
         margin-top: 1rem;
         text-align: center;
         font-weight: 600;
-        color: white;
+        color: currentColor;
         transform: skewY(10deg);
+        @media (max-width : 575px) {
+            font-size: 1rem;
+            margin-bottom: 2%;
+            margin-top: 0rem !important;
+        }
+    }
+    .profile-url{
+        font-size: 1rem;
+        transform: skewY(10deg);  
+        cursor: pointer;  
+        background-color: brown;
+        color: rgb(255, 255, 255);
+        padding: 4px;
+        border-radius: 5px;
+        margin-top: 1%;
+        text-decoration: none;
+    }
+
+    .profile-good-at{
+        margin-top: 4%;
+        transform: skewY(10deg);  
     }
     .skills-icons-wrapper{
         display: flex;

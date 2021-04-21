@@ -82,8 +82,10 @@ const Header = () => {
                 <span id="nav-text-blog"><Link to="/blogHome">My Blogs</Link></span>
                 <span onClick={downloadResume} id="nav-text-resume">Download My Resume</span>
             </div>
-            <span className="profile-title-wrapper">FrontEnd Developer</span>
-            <span className="profile-sub-title-wrapper">Hariom Sinha</span>
+            <span className="profile-title-wrapper">Hariom Kumar Sinha</span>
+            <span className="profile-sub-title-wrapper">Frontend Developer | Blogger</span>
+            <a href="https://sinhahariom.netlify.app/" className="profile-url">sinhahariom.netlify.app</a>
+            <span className="profile-good-at">I am good at</span>
             <div className="skills-icons-wrapper">
                 {skillList.map(list => (
                     <img className="skill-icon" key={list.link} src= {list.link} title={list.title} alt="NA"></img>

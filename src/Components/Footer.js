@@ -17,7 +17,9 @@ const Footer = () => {
             "link":"https://medium.com/@sinhahariom1"
         }
     ];
-
+    const downloadResume = () => {
+        window.open("http://hariomsinha.in:8080/downloadResume","_blank");
+    }
     return ( 
         <div className="footer-wrapper">
             <span className="profile-image"></span>
@@ -29,11 +31,12 @@ const Footer = () => {
                     ))
                 }
             </div>
-            {/* <span className="footer-hire-me">Hire Me Or Lets Have a Chat !</span> */}
+            <span className="footer-hire-me">Hire Me &#128512;</span>
+            <span className="footer-hire-me" onClick={downloadResume} id="nav-text-resume">Download My Resume</span>
             <span className="footer-epilogue">sinhahariom1@gmail.com</span>
             <span className="footer-epilogue">(+91) 8337944479</span>
             <span className="footer-copyright"> &copy; sinhahariom.netlify.app</span>
-            <span className="footer-copyright updates"> Updates Hitting Soon</span>
+            <span className="footer-copyright"> Updates Coming Very Soon</span>
         </div>
      );
 }

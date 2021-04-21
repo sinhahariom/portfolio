@@ -6,9 +6,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(0, 0, 0);
+    color: #efcfcf;
     flex-direction: column;
     margin-top: 5%;
+    background-image: linear-gradient(#070556, #5b6d9a);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
     .title-name{
         font-size: 1.5rem;
         font-weight: 700;
@@ -63,11 +68,22 @@
         }
     }
     .footer-hire-me{
-        font-size: 1.5rem;
-        margin-bottom: 0%;
-        color: rgb(2, 43, 90);
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 600;
+        color: white;
+        text-decoration: underline;
+        background-color: #5631ff;
+        padding: 5px;
+        width: 15%;
+        border-radius: 2px;
+        margin: 5px;
         @media (max-width :520px) {
-            font-size: 1rem;
+            font-size: 0.8rem;
+            margin: 2%;
+            width: 50%;
         }
     }
     .footer-epilogue{
@@ -82,7 +98,7 @@
     }
     
     .footer-copyright{
-        color: rgb(2, 43, 90);
+        color: rgb(158, 198, 245);
         @media (max-width :520px) {
             font-size: 0.7rem;
         }
