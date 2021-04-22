@@ -32,4 +32,20 @@
             font-weight: bold;
         }
     }
+    .filter-wrapper{
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        .search-blog{
+            margin: 2% 0% 0% 6%;
+            @media (max-width : 575px) {
+                margin-left: 8%;
+            }
+        }
+        .cancel-filter{
+            width: 130px;
+            margin:2%;
+            height: 40px;
+        }
+    }
 }
