@@ -32,11 +32,11 @@ const Footer = () => {
                 }
             </div>
             <span className="footer-hire-me">Hire Me &#128512;</span>
-            <span className="footer-hire-me" onClick={downloadResume} id="nav-text-resume">Download My Resume</span>
+            <span className="footer-hire-me link" onClick={downloadResume} id="nav-text-resume">Download My Resume</span>
             <span className="footer-epilogue">sinhahariom1@gmail.com</span>
             <span className="footer-epilogue">(+91) 8337944479</span>
             <span className="footer-copyright"> &copy; sinhahariom.netlify.app</span>
-            <span className="footer-copyright"> Updates Coming Very Soon</span>
+            {/* <span className="footer-copyright"> Updates Coming Very Soon</span> */}
         </div>
      );
 }

@@ -72,8 +72,6 @@
         font-family: 'Titillium Web', sans-serif;
         font-weight: 600;
         color: white;
-        text-decoration: underline;
-        background-color: #5631ff;
         padding: 5px;
         width: 15%;
         border-radius: 2px;
@@ -82,6 +80,10 @@
             font-size: 0.8rem;
             margin: 2%;
             width: 50%;
+        }
+        &.link{
+            background-color: #5631ff;
+            text-decoration: underline;
         }
     }
     .footer-epilogue{
