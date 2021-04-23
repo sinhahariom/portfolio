@@ -70,7 +70,8 @@ const Header = () => {
     }
     
     const downloadResume = () => {
-        window.open("http://hariomsinha.in:8080/downloadResume","_blank");
+        window.open("http://hariomsinha.in:8080/downloadResume","_self");
+        // window.open("http://localhost:8081/downloadResume","_blank");
     }
     return (
 
