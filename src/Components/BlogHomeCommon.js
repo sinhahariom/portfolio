@@ -1,4 +1,6 @@
 import './BlogHomeCommon.scss';
+import ReactHtmlParser from 'react-html-parser'; 
+
 const BlogHomeCommon = (props) => {
 
     var btn_id = props.btnId + "_btn";
@@ -10,7 +12,7 @@ const BlogHomeCommon = (props) => {
                     <span className="sub-title">{props.subTitle}</span>
             </button>
             <div className="content-wrapper" id={btn_id}>
-                <span className="content">{props.blogContent}</span>
+                <span className="content">{ReactHtmlParser(props.blogContent)}</span>
             </div>
         </div>
 
