@@ -4,6 +4,7 @@ import Skills from './Components/Skills/skills';
 import Footer from './Components/Footer';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogHome from './Components/BlogHome';
+import ToDoMainParent from './Components/ToDoApp/ToDoMainParent';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
               </Route>
               <Route path="/blogHome">
                   <BlogHome></BlogHome>
+              </Route>
+              <Route path="/todoApp">
+                  <ToDoMainParent></ToDoMainParent>
               </Route>
             </Switch>
         </div>

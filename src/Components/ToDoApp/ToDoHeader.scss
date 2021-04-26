@@ -1,0 +1,19 @@
+.header-parent{
+    width: 200px;
+    padding: 1% 0% 0% 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    img{
+        height:50px;
+        width: 50px;
+    }
+    span{
+        text-align: center;
+        font-size: 2rem;
+        color: black;
+        font-weight: 900;
+        padding-left: 2%;
+    }
+}
