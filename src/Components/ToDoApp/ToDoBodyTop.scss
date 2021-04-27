@@ -50,6 +50,18 @@
             font-weight: 1000; 
             width: 70%;
         }
+            button{    
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            background: transparent;
+            outline: none;
+            border: none;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+    }
     }
     .add-new-task{
         width: 70%;

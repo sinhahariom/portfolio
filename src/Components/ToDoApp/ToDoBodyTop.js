@@ -3,13 +3,23 @@ import './ToDoBodyTop.scss';
 
 const ToDoBodyTop = () => {
 
-    var [taskCount, setTaskCount] = useState([]);
+    var [taskCount, setTaskCount] = useState([{"id":0,"detail":""}]);
     var [counter, setCounter] = useState(0);
     const addNewTask = ()=>{
-        setCounter(counter+1);
-        taskCount.push(counter);
+        setCounter(++counter);
+        let temp = {};
+        temp.id = counter;
+        temp.detail = "";
+        taskCount.push(temp);
         setTaskCount(taskCount);
         console.log(taskCount);
+    }
+
+    const deleteTask = (id)=>{
+      console.log(taskCount);
+      let temp = taskCount.filter((data)=> data.id !== id);
+      setTaskCount(temp);
+      console.log(taskCount);
     }
     return ( 
        <div className="body-top-wrapper">
@@ -18,9 +28,11 @@ const ToDoBodyTop = () => {
                 <input type="text" className="form-control" id="target" placeholder="I have a Target to achieve...."/>
             </div>
              {taskCount.map(data=>(
-                  <div className="form-group task-input-wrapper" key={data}>
+                  <div className="form-group task-input-wrapper" key={data.id}>
                     <label htmlFor="target">My Goal is to</label>
-                    <input type="text" className="form-control" id="target" placeholder="I have a Target to achieve...."></input>
+                    <input type="text" className="form-control"  placeholder="I have a Target to achieve...."></input>
+                    <span className="mt-2">Delete This Task</span>
+                    <button type="button" onClick={()=>deleteTask(data.id)}><img alt="NA" src="data:image/svg+xml,%3Csvg height='512pt' viewBox='0 0 512 512' width='512pt' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm0 0' fill='%23f44336'/%3E%3Cpath d='m350.273438 320.105469c8.339843 8.34375 8.339843 21.824219 0 30.167969-4.160157 4.160156-9.621094 6.25-15.085938 6.25-5.460938 0-10.921875-2.089844-15.082031-6.25l-64.105469-64.109376-64.105469 64.109376c-4.160156 4.160156-9.621093 6.25-15.082031 6.25-5.464844 0-10.925781-2.089844-15.085938-6.25-8.339843-8.34375-8.339843-21.824219 0-30.167969l64.109376-64.105469-64.109376-64.105469c-8.339843-8.34375-8.339843-21.824219 0-30.167969 8.34375-8.339843 21.824219-8.339843 30.167969 0l64.105469 64.109376 64.105469-64.109376c8.34375-8.339843 21.824219-8.339843 30.167969 0 8.339843 8.34375 8.339843 21.824219 0 30.167969l-64.109376 64.105469zm0 0' fill='%23fafafa'/%3E%3C/svg%3E"></img> </button>
                   </div>
                 ))
               }

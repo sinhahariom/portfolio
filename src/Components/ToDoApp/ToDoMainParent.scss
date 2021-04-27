@@ -1,19 +1,24 @@
 .main-parent{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
+    padding: 0;
     display: flex;
     flex-direction: column;
-     .parent-top-child{
-         height: 6.25rem;
-         background-color: #ffeaea;
+    overflow: hidden;
+    .parent-top-child{
+         background-color: #f7f7f7;
          display: flex;
          justify-content: left;
+         width: 100%;
+         padding: 1%;
      }
      .parent-bottom-child{
-         height: 100%;
-         display: flex;
+        flex: 1; 
+        display: flex;
          flex-direction: row;
+         height: 100%;
+         overflow-y: scroll;
          .parent-bottom-left-child{
              width: 25rem;
          }
