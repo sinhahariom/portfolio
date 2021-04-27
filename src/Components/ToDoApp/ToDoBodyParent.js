@@ -1,6 +1,13 @@
+import ToDoBodyList from './ToDoBodyList';
+import ToDoBodyTop from './ToDoBodyTop';
+import './ToDoBodyParent.scss';
+
 const ToDoBodyParent = () => {
     return ( 
-       <p>Body Parent Works</p>
+       <div className="body-parent-wrapper">
+         <ToDoBodyTop/>
+         <ToDoBodyList/>
+       </div>
      );
 }
  
