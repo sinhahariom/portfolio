@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './ToDoBodyTop.scss';
 
-const ToDoBodyTop = () => {
+const ToDoBodyTop = (props) => {
 
     var [taskList, settaskList] = useState([{"id":0,"detail":""}]);
     var [taskTitle,setTaskTitle] = useState("");
@@ -37,14 +37,14 @@ const ToDoBodyTop = () => {
     }
 
     const saveTask = ()=>{
-      var temp = {};
-      temp.title = taskTitle;
-      temp.taskList = taskList;
-      setTask(task);
-      //return from here -- do not use state here.
+      var temp = [];
+      var taskContents = {};
+      taskContents.title = taskTitle;
+      taskContents.taskList = taskList;
+      temp.push(taskContents);
+      props.setToDoList(temp);
+      console.log(temp);
     } 
-
-
 
     return ( 
        <div className="body-top-wrapper">
