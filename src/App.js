@@ -2,8 +2,11 @@ import './App.scss';
 import Header from './Components/Header';
 import Skills from './Components/Skills/skills';
 import Footer from './Components/Footer';
+import ErrorPage from './Components/Error/ErrorPage';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogHome from './Components/BlogHome';
+import {Provider} from "react-redux";
+import store from "./Redux/Store";
 
 function App() {
   return (
@@ -18,6 +21,7 @@ function App() {
               <Route path="/blogHome">
                   <BlogHome></BlogHome>
               </Route>
+              <Route component={ErrorPage}></Route>
             </Switch>
         </div>
     </Router>
