@@ -1,18 +1,13 @@
 import { ProjectConstants } from "../Constants/ProjectConstants"
 
 const initialState = {
-    projects : [
-        {
-            id:0,
-            name:"Flying Emotions"
-        }
-    ]
+    projects : []
 }
 
 export const ProjectReducers = (state = {initialState}, {type, payload})=>{
     switch(type){
-        case ProjectConstants.SELECT_PROJECTS:
-            return state;
+        case ProjectConstants.RENDER_PROJECTS:
+            return {...state,payload}
         default : 
             return state;
     }

@@ -5,8 +5,7 @@ import Footer from './Components/Footer';
 import ErrorPage from './Components/Error/ErrorPage';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogHome from './Components/BlogHome';
-import {Provider} from "react-redux";
-import store from "./Redux/Store";
+import ShowCaseProjects from './Components/Projects/ShowCaseProjects';
 
 function App() {
   return (
@@ -21,6 +20,7 @@ function App() {
               <Route path="/blogHome">
                   <BlogHome></BlogHome>
               </Route>
+              <Route path="/showCaseProjects" component={ShowCaseProjects}></Route>
               <Route component={ErrorPage}></Route>
             </Switch>
         </div>
