@@ -57,6 +57,7 @@ const Header = () => {
     const clickOpenMobileNav = ()=>{
         document.getElementById('navbar-id').classList.add('mobile-nav');
         document.getElementById('nav-text-blog').style.display = "block";
+        document.getElementById('nav-text-experience').style.display = "block";
         document.getElementById('nav-text-resume').style.display = "block";
         document.getElementById('mobile-nav-open-id').classList.add('hide');
         document.getElementById('mobile-nav-close-id').classList.add('show');
@@ -64,6 +65,7 @@ const Header = () => {
     const clickCloseMobileNav = ()=>{
         document.getElementById('navbar-id').classList.remove('mobile-nav');
         document.getElementById('nav-text-blog').style.display = "none";
+        document.getElementById('nav-text-experience').style.display = "none";
         document.getElementById('nav-text-resume').style.display = "none";
         document.getElementById('mobile-nav-open-id').classList.remove('hide');
         document.getElementById('mobile-nav-close-id').classList.remove('show');
@@ -82,6 +84,7 @@ const Header = () => {
                 {/* <span id="nav-text-home"><Link to="/">Home</Link></span> */}
                 <span id="nav-text-blog"><Link to="/blogHome">My Blogs</Link></span>
                 <span onClick={downloadResume} id="nav-text-resume">Download My Resume</span>
+                <span id="nav-text-experience"><Link to="/showCaseProjects">My Experience</Link></span>
             </div>
             <span className="profile-title-wrapper">Hariom Kumar Sinha</span>
             <span className="profile-sub-title-wrapper">Frontend Developer | Blogger</span>
