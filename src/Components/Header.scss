@@ -6,11 +6,23 @@
     align-items: center;
     justify-content: center;
     flex-direction: column ;
-    background-image: linear-gradient(#0f2667, #000d2f);
+    background: linear-gradient(-45deg, #14033b, #000000, #5e4cad, #280457);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
     transform: skewY(-10deg);
     transform-origin: top left;
-    background-color: rgb(88, 127, 235);
     color: white;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
     .navbar-wrapper{
         position: absolute;
         left: 0;

@@ -10,6 +10,12 @@
         img{
             height: 50px;
             width: 50px;
+            @media (max-width : 575px) {
+                height: 30px;
+                width: 30px;
+                margin-left: 2rem;
+                margin-top: 1rem;
+            }
         }
     }
     .grid-container{
@@ -40,6 +46,9 @@
                     height: 100% !important;
                     width: 100%;
                 }
+            }
+            @media (max-width : 575px) {
+                grid-template-rows: 150px 50px 50px;
             }
         }
     }
